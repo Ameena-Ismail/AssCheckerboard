@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='JS/functions.js') }}"></script>
+
+</head>
+<body>
+    <main>
+        {%for i in range(x):%}
+            {%for j in range(y):%}
+            {%if (i+j)%2 !=0%}
+                {%set color="black"%}
+            {%endif%}
+                <div class="box" style="margin: -2px;background:{{color}};"></div>
+            {%endfor%}
+            <br>
+        {%endfor%}
+    </main>
+
+</body>
+</html>
